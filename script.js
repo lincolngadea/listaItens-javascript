@@ -1,9 +1,13 @@
-let lista = document.querySelector('#lista');
+let lista = document.querySelector('.lista');
 
-//lista.innerHTML = '';
+
 document.getElementById('form').addEventListener('click',(event)=>{
     event.preventDefault()});
 
+    if(document.getElementsByTagName('li').length == 0){
+        lista.style.display ='none';
+    }
+    
 
 function cadastrar(){
     
@@ -15,9 +19,11 @@ function cadastrar(){
         alert('O Campo não pode estar vazio');
         return false;
     }else{
+        lista.style.display ='block';
         document.getElementById('myUl').appendChild(li);
         li.appendChild(dt);
         document.getElementById('data').value = '';
+        
     }   
 }
 
