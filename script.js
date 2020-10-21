@@ -18,11 +18,9 @@ function cadastrar(){
         document.getElementById('myUl').appendChild(li);
         li.appendChild(dt);
         document.getElementById('data').value = '';
-
-    }
-    
-   
+    }   
 }
+
 
 //função em implementação
 function createButton(){
