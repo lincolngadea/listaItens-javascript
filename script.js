@@ -1,20 +1,22 @@
-let lista = document.querySelector('.lista');
+let lista = document.querySelector('#lista');
 
-lista.innerHTML = '';
+//lista.innerHTML = '';
 document.getElementById('form').addEventListener('click',(event)=>{
     event.preventDefault()});
 
 
 function cadastrar(){
-    let ul = document.createElement('ul');
+    
+   //bloco de inserção dos dados na lista 
     let li = document.createElement('li');
-    let dt = document.createTextNode(document.querySelector("[name='item']").value);
+    let inputValue = document.getElementById('data').value;
+    let dt = document.createTextNode(inputValue);
+    document.getElementById('myUl').appendChild(li);
 
     li.appendChild(dt);
-    ul.appendChild(li);
-    lista.appendChild(ul);
 }
 
+//função em implementação
 function createButton(){
 
     let bt = document.createElement('button');
