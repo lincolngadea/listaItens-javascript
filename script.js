@@ -11,9 +11,17 @@ function cadastrar(){
     let li = document.createElement('li');
     let inputValue = document.getElementById('data').value;
     let dt = document.createTextNode(inputValue);
-    document.getElementById('myUl').appendChild(li);
+    if(inputValue === ''){
+        alert('O Campo não pode estar vazio');
+        return false;
+    }else{
+        document.getElementById('myUl').appendChild(li);
+        li.appendChild(dt);
+        document.getElementById('data').value = '';
 
-    li.appendChild(dt);
+    }
+    
+   
 }
 
 //função em implementação
@@ -21,6 +29,7 @@ function createButton(){
 
     let bt = document.createElement('button');
     let lbl = document.createTextNode('Limpar');
+
     bt.appendChild(lbl);
     bt.onclick = ()=>{
         console.log('botão');
